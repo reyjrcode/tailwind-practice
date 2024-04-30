@@ -1,9 +1,10 @@
- 
+
 import './App.css'
+import { Nav } from '../src/components/Nav.jsx'
 
 function App() {
-  return <div className='text-4xl'>
-    Hello world
+  return <div className='p-10 xl:px-24'>
+    <Nav />
   </div>;
 }
 
