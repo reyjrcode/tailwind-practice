@@ -2,9 +2,9 @@ import nike1 from "../assets/n1-min.png"
 
 export function ShoeDetail() {
     return (
-        <div className="flex flex-col lg:flex-row-reverse space-y-4">
-            <div className="flex-1 ">
-                <div className="bg-gradient-to-br from-[#F637CF] via-[#E3D876] to-[#4DD4C6] from-5% via-40%">
+        <div className=" flex flex-col lg:flex-row-reverse space-y-4">
+            <div className="flex-1 lg:-mt-32 lg:ml-28">
+                <div className="flex items-center justify-center h-full bg-gradient-to-br from-[#F637CF] via-[#E3D876] to-[#4DD4C6] from-5% via-40%">
                     <img src={nike1} alt="walay image" />
                 </div>
             </div>
