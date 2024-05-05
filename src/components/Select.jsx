@@ -10,7 +10,7 @@ export function Select({ title, options }) {
                 </option>
             ))}
         </select>
-        <div className="inset-y-0 right-0 pr-3 flex items-center justify-center absolute">
+        <div className="pointer-events-none inset-y-0 right-0 pr-3 flex items-center justify-center absolute">
             <IoIosArrowDown />
         </div>
     </div>;
