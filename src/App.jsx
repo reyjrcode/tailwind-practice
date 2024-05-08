@@ -7,6 +7,7 @@ import { SHOE_LIST } from './constant.js';
 import { NewArrivalsSection } from './components/NewArrivalSection.jsx';
 import { SideBar } from './components/SideBar.jsx';
 import { useState } from 'react';
+import { CartItem } from './components/CartItem.jsx';
 
 function App() {
 
@@ -17,10 +18,13 @@ function App() {
     <ShoeDetail />
     {/* <Card item={SHOE_LIST[0]}/> */}
     <NewArrivalsSection items={SHOE_LIST} />
-    <SideBar isOpen={isSideBarOpen} onClickClose={()=>setSideBarOpen(false)}>
-    Hi
-      </SideBar>
-  
+    <SideBar isOpen={isSideBarOpen} onClickClose={() => setSideBarOpen(false)}>
+      <h2 className='mb-10 text-2xl font-bold'>Cart</h2>
+      <CartItem item={SHOE_LIST[0]} />
+      <CartItem item={SHOE_LIST[1]} />
+      <CartItem item={SHOE_LIST[2]} />
+    </SideBar>
+
   </div>;
 }
 
