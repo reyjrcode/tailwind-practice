@@ -41,7 +41,7 @@ function App() {
     );
   };
 
-  return <div className='p-10 xl:px-24 animate-fadeIn'>
+  return <div className='p-10 xl:px-24 animate-fadeIn dark:bg-night'>
     <Nav onClickShoppingBtn={() => setSideBarOpen(true)} />
     <ShoeDetail />
     {/* <Card item={SHOE_LIST[0]}/> */}
