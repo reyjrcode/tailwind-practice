@@ -6,8 +6,9 @@ import { ShoeDetail } from '../src/components/ShoeDetail.jsx'
 import { SHOE_LIST } from './constant.js';
 import { NewArrivalsSection } from './components/NewArrivalSection.jsx';
 import { SideBar } from './components/SideBar.jsx';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Cart } from './components/Cart.jsx';
+import { BiMoon, BiSun } from 'react-icons/bi';
 // import { CartItem } from './components/CartItem.jsx';
 
 
@@ -22,6 +23,23 @@ const FAKE_CART_ITEMS = SHOE_LIST.map(shoe => {
 function App() {
 
   const [isSideBarOpen, setSideBarOpen] = useState(false);
+  useEffect(() => {
+    const isDarkMode = localStorage.getItem("isDarkMode");
+    if (isDarkMode == "true") {
+      window.document.documentElement.classList.add("dark");
+    }
+  }, [])
+  const toggleDarkMode = () => {
+    window.document.documentElement.classList.toggle("dark");
+    localStorage.setItem(
+      "isDarkMode",
+      window.document.documentElement.classList.contains("dark"),
+      localStorage.setItem(
+        "isDarkMode",
+        window.document.documentElement.classList.contains("dark"),
+      )
+    );
+  };
 
   return <div className='p-10 xl:px-24 animate-fadeIn'>
     <Nav onClickShoppingBtn={() => setSideBarOpen(true)} />
@@ -35,7 +53,14 @@ function App() {
       <CartItem item={SHOE_LIST[2]} /> */}
       <Cart cartItems={FAKE_CART_ITEMS} />
     </SideBar>
-
+    <div className="fixed bottom-4 right-4 ">
+      <button
+        onClick={toggleDarkMode}
+        className='bg-night-50  text-white  rounded-full px-4 py-2 dark:bg-white dark:text-night shadow-lg'>
+        <BiSun className='hidden dark:block' />
+        <BiMoon className='dark:hidden' />
+      </button>
+    </div>
   </div>;
 }
 
