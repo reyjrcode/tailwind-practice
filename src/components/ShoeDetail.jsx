@@ -3,24 +3,24 @@ import { QTY, SIZES } from "../constant";
 import { Select } from "./Select";
 
 
-export function ShoeDetail() {
+export function ShoeDetail({ shoe }) {
     return (
         <div className=" flex flex-col lg:flex-row-reverse space-y-4 dark:text-white">
             <div className="flex-1 lg:-mt-32 lg:ml-28">
                 <div className="  flex items-center justify-center h-full bg-gradient-to-br from-[#F637CF] via-[#E3D876] to-[#4DD4C6] from-5% via-40%">
-                    <img src={nike1} alt="walay image" className="animate-float" />
+                    <img src={shoe.src} alt="walay image" className="animate-float" />
                 </div>
             </div>
             <div className="flex-1 space-y-6">
                 <div className="text-5xl font-black md:text-9xl">
-                    Nike Air Max 270
+                    {shoe.title}
                 </div>
                 <div className="font-medium md:text-xl">
-                    {"The Nike Air Max 270 is a lifestyle shoe that's sure to turn heads with its vibrant color gradient."}
+                    {shoe.description}
                 </div>
                 <div className="flex space-x-6">
                     <div className="text-3xl font-extrabold md:text-6xl">
-                        100 $
+                        {shoe.price} $
                     </div>
                     <Select title={"QTY"} options={QTY} />
                     <Select title={"SIZE"} options={SIZES} />
