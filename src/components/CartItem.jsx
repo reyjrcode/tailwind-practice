@@ -25,13 +25,13 @@ export function CartItem({ item: { product, qty, size } }) {
                     <div className="flex space-x-6">
                         {/* QTY input */}
                         <div className="mt-2 space-y-1">
-                            <div className="font-bold dark:text-white">QTY</div>
-                            <Select defaultValue={qty} title={qty} options={QTY} className={"w-16 p-1 pl-2"} />
+                            <div className="font-bold dark:text-white">SIZE</div>
+                            <Select value={size} title={size} options={SIZES} className={"w-16 p-1 pl-2"} />
                         </div>
                         {/* SIZE input */}
                         <div className="mt-2 space-y-1">
-                            <div className="font-bold dark:text-white">SIZE</div>
-                            <Select defaultValue={size} title={size} options={SIZES} className={"w-16 p-1 pl-2"} />
+                            <div className="font-bold dark:text-white">QTY</div>
+                            <Select value={qty} title={qty} options={QTY} className={"w-16 p-1 pl-2"} />
                         </div>
                     </div>
                     {/* Trash icon */}
