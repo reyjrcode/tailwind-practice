@@ -85,6 +85,11 @@ function App() {
         <BiMoon className='dark:hidden' />
       </button>
     </div>
+    <a href='https://github.com/reyjrcode/tailwind-practice.git'>
+      <button
+        className="mt-10 btn-press-anim h-14 w-44 bg-black text-white hover:bg-gray-900 active:bg-gray-700 dark:bg-white  dark:text-black">
+        Source code</button>
+    </a>
   </div>;
 }
 
