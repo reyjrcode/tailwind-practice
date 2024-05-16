@@ -2,7 +2,7 @@ import { Select } from "./Select";
 import { CiTrash } from "react-icons/ci";
 import { QTY, SIZES } from "../constant";
 
-export function CartItem({ item: { product, qty, size } }) {
+export function CartItem({ item: { product, qty, size }, onClickTrash }) {
     return (
         <div className=" cursor-pointer bg-gray-50 p-2 hover:bg-[#DAFFA2] dark:bg-transparent dark:hover:bg-night-50">
             <div>
@@ -35,11 +35,11 @@ export function CartItem({ item: { product, qty, size } }) {
                         </div>
                     </div>
                     {/* Trash icon */}
-                    <button className="flex-center mt-6">
+                    <button className="flex-center mt-6" onClick={() => onClickTrash(product.id)}>
                         <CiTrash size={25} className="text-black dark:text-white" />
                     </button>
                 </div>
             </div>
-        </div>
+        </div >
     );
 }

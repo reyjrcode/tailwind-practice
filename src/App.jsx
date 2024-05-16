@@ -19,7 +19,8 @@ function App() {
   const [isSideBarOpen, setSideBarOpen] = useState(false);
   const [currentShoe, setCurrentShoe] = useState(SHOE_LIST[0]);
   const [cartItems, setCartItems] = useState([]);
-  console.log("****",cartItems)
+
+  console.log("****", cartItems)
   useEffect(() => {
     const isDarkMode = localStorage.getItem("isDarkMode");
     if (isDarkMode == "true") {
@@ -38,6 +39,15 @@ function App() {
     );
   };
 
+  const removeFromCart = (productId) => {
+    console.log("***", productId);
+    const updatedCartItems = [...cartItems];
+    const existingItemIndex = cartItems.findIndex(
+      (item) => item.product.id === productId,
+    );
+    updatedCartItems.splice(existingItemIndex, 1);
+    setCartItems(updatedCartItems);
+  };
   const addToCart = (product, qty, size) => {
     if (qty && size) {
       const updatedCartItems = [...cartItems];
@@ -65,7 +75,7 @@ function App() {
       {/* <CartItem item={SHOE_LIST[0]} />
       <CartItem item={SHOE_LIST[1]} />
       <CartItem item={SHOE_LIST[2]} /> */}
-      <Cart cartItems={cartItems} />
+      <Cart cartItems={cartItems} onClickTrash={removeFromCart} />
     </SideBar>
     <div className="fixed bottom-4 right-4 ">
       <button
