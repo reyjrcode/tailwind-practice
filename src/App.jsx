@@ -71,7 +71,7 @@ function App() {
     {/* <Card item={SHOE_LIST[0]}/> */}
     <NewArrivalsSection items={SHOE_LIST} onClickCard={setCurrentShoe} />
     <SideBar isOpen={isSideBarOpen} onClickClose={() => setSideBarOpen(false)}>
-      <h2 className='mb-10 text-2xl font-bold'>Cart</h2>
+      <h2 className='mb-10 text-2xl font-bold'>Rey Rey Rey Rey Rey</h2>
       {/* <CartItem item={SHOE_LIST[0]} />
       <CartItem item={SHOE_LIST[1]} />
       <CartItem item={SHOE_LIST[2]} /> */}
