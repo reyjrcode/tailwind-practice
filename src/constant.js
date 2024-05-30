@@ -12,7 +12,7 @@ export const SHOE_LIST = [
         id: 1,
         src: nike1,
         className: "bg-[#EEFFA4]",
-        title: "Nike Air Max 270",
+        title: "Mary Fe pangit",
         description:
             "The Nike Air Max 270 is a lifestyle shoe that's sure to turn heads with its vibrant color gradient.",
         price: 160,
@@ -21,7 +21,7 @@ export const SHOE_LIST = [
         id: 2,
         src: nike2,
         className: "bg-[#DDCEFD]",
-        title: "Nike Air Vapor",
+        title: "Roshiel gwapa",
         description:
             "The Nike Air Vapor is a sleek and stylish shoe that's perfect for any occasion. It's the perfect shoe for any active lifestyle.",
         price: 100,
